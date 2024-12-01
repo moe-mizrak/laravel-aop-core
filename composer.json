@@ -1,0 +1,56 @@
+{
+  "name": "moe-mizrak/laravel-aop-core",
+  "description": "Laravel package for AOP (Aspect Oriented Programming) - core package",
+  "keywords": [
+    "Moe Mizrak",
+    "laravel",
+    "laravel-aop-core",
+    "LaravelAopCore",
+    "Aspect Oriented Programming",
+    "Aspect",
+    "Interceptor"
+  ],
+  "type": "package",
+  "homepage": "https://github.com/moe-mizrak/laravel-aop-core",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Moe Mizrak"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "laravel/pint": "^1.18",
+    "ray/aop": "^2.17"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^9.6.1",
+    "phpunit/phpunit": "^11.4",
+    "fakerphp/faker": "^1.24.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "MoeMizrak\\LaravelAopCore\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MoeMizrak\\LaravelAopCore\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MoeMizrak\\LaravelAopCore\\LaravelAopCoreServiceProvider"
+      ],
+      "aliases": {
+        "LaravelAopCore": "MoeMizrak\\LaravelAopCore\\Facades\\LaravelAopCore"
+      }
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
